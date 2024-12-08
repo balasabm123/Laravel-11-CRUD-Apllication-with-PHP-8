@@ -6,15 +6,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #con{
+            border: 0.5rem outset pink;
+  outline: 0.5rem solid khaki;
+  box-shadow: 0 0 0 2rem skyblue;
+  border-radius: 12px;
+  font: bold 1rem sans-serif;
+  /* margin: 1rem; */
+  padding: 1rem;
+  outline-offset: 0.5rem;
+        }
+        body{
+        padding: 0px;
+        height: 100px;
+        background-color: #e5e5e5;
+    }
+    </style>
 </head>
 <body>
     
 
-    <div class="container">
-    <h1>Product lists</h1>
+    <div class="container" >
+    <h1 style="text-align: center;"> Product lists </h1>
+    <hr>
     <a href="{{ url('product/create') }}" class="btn btn-primary" style="float: inline-end;">Add New Product</a>
     <br>
     <br>
+    <hr>
     @if(session()->has('success'))
     <div style="color: green;" id="hidde">
         {{session('success')}}
@@ -66,6 +85,7 @@
                   
                 </tbody>
               </table>
+              
     </div>
             </body>
 </html>

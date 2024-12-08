@@ -8,6 +8,8 @@ class ProductController extends Controller
 {
     public function index(){
         $products = product::all();
+        // $data['getRecords']=product::getRecordUser();
+        // $products = $data['getRecords'];
         return view('products.index',['products'=>$products]);
     }
 
