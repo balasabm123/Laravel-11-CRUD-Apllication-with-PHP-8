@@ -36,8 +36,7 @@ class ProductController extends Controller
         return view('products.edit',['getRecord'=>$data]); 
     }
 
-    public function update($id, Request $request){ 
-
+    public function update($id, Request $request){  
           $data = $request->validate([
             'name'=>'required',
             'qty'=>'required|numeric',

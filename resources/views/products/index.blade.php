@@ -36,6 +36,8 @@
                     <th scope="col">qty</th> 
                     <th scope="col">price</th>
                     <th scope="col">Description</th>
+                    <th scope="col">Created at</th>
+                    <th scope="col">Updated at</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -49,6 +51,8 @@
                     <td>{{$value->description}}</td>
                     <!-- <td>{{!empty($value->status) ? 'Active' : 'Inactive'}}</td>
                     <td>{{date('d-m-Y H:i A', strtotime($value->created_at))}}</td> -->
+                    <td>{{date('d-m-Y H:i A', strtotime($value->created_at))}}</td>
+                    <td>{{date('d-m-Y H:i A', strtotime($value->updated_at))}}</td>
                     <td>
                        <a href="{{ url('product/edit/'.$value->id) }}" class="btn btn-primary btn-sm">Edit</a>
                         <a  onclick="return confirm('Are you sure you want to delete this item?');" href="{{ url('product/delete/'.$value->id)  }}" class="btn btn-danger btn-sm">Delete</a>  
