@@ -101,5 +101,5 @@ setTimeout(function () {
 
 setTimeout(function () {
     document.getElementById('del').remove();
-}, 5000);
+}, 3000);
 </script>
